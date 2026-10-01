@@ -216,6 +216,7 @@ class Collector:
             parents = model._meta.parents
             for related in get_candidate_relations_to_delete(model._meta):
                 # Preserve parent reverse relationships if keep_parents=True.
+                #changes made
                 if keep_parents and related.model in parents:
                     continue
                 field = related.field
